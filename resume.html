@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nour Emad Abdallah | Professional CV</title>
+  <meta name="description" content="Professional resume for Nour Emad Abdallah, Data Science and Artificial Intelligence Specialist.">
+  <link rel="canonical" href="https://portofolio-two-orpin-70.vercel.app/resume.html">
+  <link rel="icon" type="image/jpeg" href="profile.jpg">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    /* CV Page Styles - Clean Dark-Theme UI with High-Contrast Print styles */
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+    :root {
+      --bg-screen: #090d16;
+      --bg-paper: #ffffff;
+      --text-dark: #1f2937;
+      --text-light: #4b5563;
+      --text-muted: #9ca3af;
+      --accent: #4f46e5;
+      --accent-light: #e0e7ff;
+      --border: #e5e7eb;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-screen);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: var(--text-dark);
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    /* Actions Bar */
+    .actions-bar {
+      width: 100%;
+      max-width: 800px;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      border-radius: 8px;
+      text-decoration: none;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: all 0.2s ease;
+    }
+
+    .btn-back {
+      background: rgba(255, 255, 255, 0.05);
+      color: #fff;
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .btn-back:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .btn-print {
+      background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+      color: #fff;
+      box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+    }
+
+    .btn-print:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(99, 102, 241, 0.4);
+    }
+
+    .btn-download {
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+      border-color: rgba(255, 255, 255, 0.16);
+    }
+
+    .btn-download:hover {
+      background: rgba(255, 255, 255, 0.14);
+      transform: translateY(-2px);
+    }
+
+    /* Paper/Resume Container */
+    .resume-container {
+      background-color: var(--bg-paper);
+      width: 100%;
+      max-width: 800px;
+      min-height: 1130px; /* A4 Ratio */
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      border-radius: 12px;
+      padding: 45px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    /* Header styling */
+    .resume-header {
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .header-info h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--text-dark);
+      letter-spacing: -0.02em;
+      margin-bottom: 6px;
+    }
+
+    .header-info h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .header-contact {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      font-size: 0.85rem;
+      color: var(--text-light);
+      align-items: flex-end;
+      text-align: right;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .contact-item a:hover {
+      color: var(--accent);
+    }
+
+    .contact-item i {
+      color: var(--accent);
+    }
+
+    /* Summary section */
+    .resume-section {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 24px;
+    }
+
+    .section-label {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-right: 1px solid var(--border);
+      padding-right: 15px;
+    }
+
+    .section-content {
+      font-size: 0.95rem;
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+
+    /* List items & Experience elements */
+    .exp-item {
+      margin-bottom: 20px;
+    }
+
+    .exp-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--text-dark);
+      margin-bottom: 4px;
+    }
+
+    .exp-org {
+      font-style: italic;
+      color: var(--text-light);
+      font-size: 0.9rem;
+      margin-bottom: 8px;
+    }
+
+    .exp-details {
+      list-style-type: square;
+      padding-left: 20px;
+      font-size: 0.88rem;
+      color: var(--text-light);
+    }
+
+    .exp-details li {
+      margin-bottom: 4px;
+    }
+
+    /* Skills Grid inside Resume */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .skill-cat {
+      margin-bottom: 12px;
+    }
+
+    .skill-cat-title {
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--text-dark);
+      margin-bottom: 6px;
+    }
+
+    .skill-tags {
+      font-size: 0.85rem;
+      color: var(--text-light);
+    }
+
+    /* Projects Resume section */
+    .proj-item {
+      margin-bottom: 18px;
+    }
+
+    .proj-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .proj-title {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--text-dark);
+    }
+
+    .proj-tech {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+
+    .proj-desc {
+      font-size: 0.88rem;
+      color: var(--text-light);
+    }
+
+    /* Print styling rules */
+    @media print {
+      body {
+        background-color: #fff;
+        padding: 0;
+        color: #000;
+      }
+
+      .actions-bar {
+        display: none;
+      }
+
+      .resume-container {
+        box-shadow: none;
+        border-radius: 0;
+        padding: 0;
+        width: 100%;
+        max-width: 100%;
+        min-height: 100%;
+      }
+
+      /* Keep page breaks clean */
+      .resume-section {
+        page-break-inside: avoid;
+      }
+      
+      .exp-item {
+        page-break-inside: avoid;
+      }
+      
+      .proj-item {
+        page-break-inside: avoid;
+      }
+    }
+
+    /* Mobile adjustments for viewer */
+    @media (max-width: 768px) {
+      body {
+        padding: 20px 10px;
+      }
+
+      .resume-container {
+        padding: 24px 16px;
+      }
+
+      .actions-bar {
+        justify-content: stretch;
+      }
+
+      .actions-bar .btn {
+        flex: 1;
+        justify-content: center;
+      }
+
+      .resume-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+      }
+
+      .header-contact {
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      .resume-section {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .section-label {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+        padding-right: 0;
+        padding-bottom: 4px;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Actions Toolbar -->
+  <div class="actions-bar">
+    <a href="index.html" class="btn btn-back">
+      <i data-lucide="arrow-left" style="width: 16px; height: 16px;"></i>
+      <span>Back to Portfolio</span>
+    </a>
+    <a href="Nour_Emad_ATS_CV.pdf" class="btn btn-download" download>
+      <i data-lucide="download" style="width: 16px; height: 16px;"></i>
+      <span>Download PDF</span>
+    </a>
+    <button onclick="window.print()" class="btn btn-print">
+      <i data-lucide="printer" style="width: 16px; height: 16px;"></i>
+      <span>Print / Save PDF</span>
+    </button>
+  </div>
+
+  <!-- Main CV Sheet -->
+  <div class="resume-container">
+    
+    <!-- CV Header -->
+    <header class="resume-header">
+      <div class="header-info">
+        <h1>Nour Emad Abdallah</h1>
+        <h2>Data Science & AI Specialist</h2>
+      </div>
+      <div class="header-contact">
+        <div class="contact-item">
+          <span>nem78324@gmail.com</span>
+          <i data-lucide="mail" style="width: 14px; height: 14px;"></i>
+        </div>
+        <div class="contact-item">
+          <span>+20 106 263 7364</span>
+          <i data-lucide="phone" style="width: 14px; height: 14px;"></i>
+        </div>
+        <div class="contact-item">
+          <span>Alexandria, Egypt</span>
+          <i data-lucide="map-pin" style="width: 14px; height: 14px;"></i>
+        </div>
+        <div class="contact-item">
+          <a href="https://linkedin.com/in/nour-emad-13920a360" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">linkedin.com/in/nour-emad-13920a360</a>
+          <i data-lucide="linkedin" style="width: 14px; height: 14px;"></i>
+        </div>
+        <div class="contact-item">
+          <a href="https://github.com/nour55717" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">github.com/nour55717</a>
+          <i data-lucide="github" style="width: 14px; height: 14px;"></i>
+        </div>
+      </div>
+    </header>
+
+    <!-- Professional Summary -->
+    <section class="resume-section">
+      <div class="section-label">Summary</div>
+      <div class="section-content">
+        Data Science & AI undergraduate with hands-on experience in predictive modeling, computer vision, and end-to-end machine learning pipeline development. Skilled in building production-ready AI systems that combine rigorous statistical analysis with interactive applications. Strong foundation in Python, SQL, feature engineering, model validation, and real-time data processing.
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="resume-section">
+      <div class="section-label">Education</div>
+      <div class="section-content">
+        <div class="exp-item"><div class="exp-header"><span>B.Sc. in Data Science & Artificial Intelligence</span><span>Expected: June 2027</span></div><div class="exp-org">Alexandria National University, Alexandria, Egypt</div><ul class="exp-details"><li>Relevant Coursework: Machine Learning, Expert Systems & Knowledge Representation, Data Structures & Algorithms, Operating Systems, SVM, Regression Analysis, DBMS, and Numerical Analysis.</li></ul></div>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="resume-section">
+      <div class="section-label">Certificates</div>
+      <div class="section-content">
+        <div class="exp-item"><div class="exp-header"><span>AWS Academy Graduate — Cloud Foundations Training Badge</span><span>Issued Dec 2025</span></div><div class="exp-org">Amazon Web Services Academy</div><ul class="exp-details"><li>AWS fundamentals, EC2, S3, VPC, RDS, cloud security, architecture, and pricing.</li></ul></div>
+        <div class="exp-item"><div class="exp-header"><span>Google Advanced Data Analytics Professional Certificate</span><span>In Progress</span></div><div class="exp-org">Coursera</div><ul class="exp-details"><li>Python, R, SQL, statistical analysis, regression models, machine learning, and Tableau.</li></ul></div>
+        <div class="exp-item"><div class="exp-header"><span>Machine Learning Specialization</span><span>In Progress</span></div><div class="exp-org">DeepLearning.AI & Stanford University</div><ul class="exp-details"><li>Supervised ML, advanced learning algorithms, neural networks, unsupervised learning, and recommender systems.</li></ul></div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="resume-section">
+      <div class="section-label">Skills</div>
+      <div class="section-content"><div class="skills-grid">
+        <div class="skill-cat"><div class="skill-cat-title">Programming Languages & Core</div><div class="skill-tags">Python, SQL (SQLite, PostgreSQL), MATLAB, JavaScript, HTML5, CSS3</div></div>
+        <div class="skill-cat"><div class="skill-cat-title">Machine Learning & AI</div><div class="skill-tags">YOLOv8, ByteTrack, SVM/SVR, Decision Trees, Random Forests, PSO, PCA, Regression, Neural Networks, Recommender Systems</div></div>
+        <div class="skill-cat"><div class="skill-cat-title">Libraries & Frameworks</div><div class="skill-tags">Scikit-Learn, Pandas, NumPy, SciPy, OpenCV, Streamlit, PyQt5, Tkinter, Matplotlib</div></div>
+        <div class="skill-cat"><div class="skill-cat-title">Tools & Environments</div><div class="skill-tags">Git, GitHub, Jupyter Notebook, VS Code, AWS (EC2, S3, RDS, VPC, Cloud Foundations)</div></div>
+      </div></div>
+    </section>
+
+    <!-- Projects -->
+    <section class="resume-section">
+      <div class="section-label">Projects</div>
+      <div class="section-content">
+        <div class="proj-item"><div class="proj-title">Intelligent Traffic Surveillance & Object Analysis System</div><div class="proj-tech">Python, YOLOv8, OpenCV, ByteTrack, NumPy</div><div class="proj-desc">Real-time vehicle detection and multi-object tracking pipeline with speed estimation, directional flow counting, anomaly detection, and structured logging.</div></div>
+        <div class="proj-item"><div class="proj-title">Medical Image Registration using Particle Swarm Optimization</div><div class="proj-tech">Python, PSO, OpenCV, SciPy, PyQt5</div><div class="proj-desc">CT/MRI alignment engine with MSE, SSIM, NCC, and Mutual Information benchmarking plus GUI parameter tuning and report generation.</div></div>
+        <div class="proj-item"><div class="proj-title">Expert Heart Disease Risk Predictor</div><div class="proj-tech">Python, Streamlit, Scikit-Learn, Pandas, NumPy</div><div class="proj-desc">Hybrid clinical decision-support system pairing ML predictions with an interpretable expert-reasoning layer and exportable medical summaries.</div></div>
+        <div class="proj-item"><div class="proj-title">King County House Price SVR Predictor</div><div class="proj-tech">Python, SVR, Scikit-Learn, Streamlit, Pandas</div><div class="proj-desc">SVR regression pipeline with preprocessing, outlier handling, spatial feature extraction, log transforms, PCA, and residual visualization.</div></div>
+      </div>
+    </section>
+
+    <!-- Core Competencies -->
+    <section class="resume-section" style="margin-bottom: 0;">
+      <div class="section-label">Core</div>
+      <div class="section-content">Problem Solving | Analytical Thinking | Attention to Detail | Critical Thinking | Research | Self-Learning | Time Management | Technical Communication | Collaborative Development | Presentation Skills<br><br><strong>Languages:</strong> Arabic — Native | English — Fluent / Professional Working Proficiency</div>
+    </section>
+
+  </div>
+
+  <script>
+    // Initialize Lucide Icons
+    if (typeof lucide !== 'undefined') {
+      lucide.createIcons();
+    }
+  </script>
+</body>
+</html>
